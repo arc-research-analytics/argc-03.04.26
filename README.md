@@ -1,4 +1,4 @@
-# Transportation Impact Layer with H3 Hexagonal Indexing
+# Transportation Impact Layer with H3
 
 This repository accompanies a presentation on building a **transportation impact layer** using [H3](https://h3geo.org/), Uber's open-source hexagonal hierarchical spatial index. The notebook demonstrates how to spatially join transportation project data to H3 hexagons to identify "hot spots" of transportation investment across metro Atlanta.
 
@@ -8,13 +8,13 @@ H3 is a geospatial indexing system that partitions the world into hexagonal cell
 
 Each resolution level increases the number of cells and decreases their size:
 
-| Resolution | Avg Hex Area  | Use Case                                               |
-| :--------: | :-----------: | ------------------------------------------------------ |
-|     5      |   ~252 km²    | Regional overview                                      |
-|     6      |    ~36 km²    | County-level patterns                                  |
-|   **7**    | **~5.16 km²** | **Neighborhood-level analysis (used in this project)** |
-|     8      |   ~0.74 km²   | Block-level detail                                     |
-|     9      |   ~0.11 km²   | Parcel-level detail                                    |
+| Resolution | Avg Hex Area | Use Case / Extent                             |
+| :--------: | :----------: | --------------------------------------------- |
+|     5      |   ~98 mi²    | Regional or metro                             |
+|     6      |   ~14 mi²    | County or town                                |
+|   **7**    | **~1.9 mi²** | **Neighborhood-level (used in this project)** |
+|     8      |   ~0.3 mi²   | Block level                                   |
+|     9      |  ~0.04 mi²   | Parcel level                                  |
 
 ## Getting Started
 
