@@ -12,7 +12,7 @@ Each resolution level increases the number of cells and decreases their size:
 | :--------: | :----------: | --------------------------------------------- |
 |     5      |   ~98 mi²    | Regional or metro                             |
 |     6      |   ~14 mi²    | County or town                                |
-|   **7**    | **~1.9 mi²** | **Neighborhood-level (used in this project)** |
+|   **7**    | **~2.0 mi²** | **Neighborhood-level (used in this project)** |
 |     8      |   ~0.3 mi²   | Block level                                   |
 |     9      |  ~0.04 mi²   | Parcel level                                  |
 
