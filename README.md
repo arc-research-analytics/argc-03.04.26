@@ -112,7 +112,3 @@ The resulting GeoDataFrame adds these columns to the original hexagon grid:
 - [GeoPandas `overlay` Documentation](https://geopandas.org/en/stable/docs/reference/api/geopandas.overlay.html)
 - [GeoPandas Documentation](https://geopandas.org/)
 - [Shapely Documentation](https://shapely.readthedocs.io/)
-
-## Questions?
-
-If you have questions about the notebook or want to learn more about how the Atlanta Regional Commission uses H3 and geospatial analysis, feel free to open an issue in this repo.
