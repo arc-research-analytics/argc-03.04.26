@@ -54,7 +54,7 @@ pip install -r requirements.txt
 jupyter notebook
 ```
 
-Then open `notebooks/h3_impact_layer.ipynb` from the Jupyter interface.
+Then open `notebooks/h3_sandbox.ipynb` from the Jupyter interface.
 
 ---
 
@@ -90,6 +90,17 @@ Transportation projects are lines (roads, corridors, transit routes) that often 
 **Why we project to EPSG:3857:** Length calculations on geographic coordinates (latitude/longitude) are unreliable because degrees don't correspond to consistent distances. Projecting to a planar coordinate system like Web Mercator ensures that our length-based proportions are accurate.
 
 **Why `gpd.overlay` instead of `gpd.sjoin`:** A spatial join (`sjoin`) assigns entire features to hexagons based on a spatial relationship (intersects, contains, etc.), but it doesn't clip geometries. The `overlay` operation actually splits the project lines at hexagon boundaries, giving us the clipped segments we need for proportional allocation.
+
+### Output Schema
+
+The resulting GeoDataFrame adds these columns to the original hexagon grid:
+
+| Column               | Description                                                               |
+| -------------------- | ------------------------------------------------------------------------- |
+| `project_count_pre`  | Number of pre-construction project segments intersecting this hexagon     |
+| `allocated_cost_pre` | Proportionally allocated cost of pre-construction projects (in dollars)   |
+| `project_count_uc`   | Number of under-construction project segments intersecting this hexagon   |
+| `allocated_cost_uc`  | Proportionally allocated cost of under-construction projects (in dollars) |
 
 ---
 
